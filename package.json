@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "draft-js": "^0.10.5",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-image-mapper": "0.0.8",
+    "react-measurements": "^0.6.4",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1"
   },
