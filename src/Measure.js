@@ -17,11 +17,11 @@ export default class Measure extends React.Component {
 	}
 
   measureLine = (line) => {
-		return Math.round(calculateDistance(line, 100, 100)) + " nanometers";
+		return (calculateDistance(line, 200, 200).toFixed(1)) + " mm";
 	}
 
   measureCircle = (circle) => {
-  	return Math.round(calculateArea(circle, 100, 100)) + " mm²";
+  	return Math.round(calculateArea(circle, 200, 200)) + " mm²";
   }
 
   onLoad = () => {
