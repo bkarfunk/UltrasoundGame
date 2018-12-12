@@ -12,7 +12,9 @@ export default class App extends React.Component {
 		  <Router>
 				<div>
 		      <Route component={Home} />
-		      <Route path="/GallBladder/" component={GallBladder} />
+		      
+			  <Route path="/GallBladder/" component={GallBladder} /> 
+			  
 		      <Route path="/Measure/" component={Measure} />
 				</div>
 		  </Router>
