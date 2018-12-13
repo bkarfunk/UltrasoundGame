@@ -64,12 +64,17 @@ export default class Gallbladder extends React.Component {
 
 	render() {
 		return ( 
-			<div className="App">
+			<div className="App"
+			style={{
+				position: 'relative',
+				fontFamily: 'sans-serif',
+				textAlign: "justify"
+			}}>
 				<header className="App-header">
 					<ImageMapper src={imageToLoad[x]}  map={MapToLoad[x]}
 						onClick={this.areaClicked}
 					/>
-					<p>Were going to learn what this is By mousing over stuff! Try mousing over the portal vein, the CBD, and the GallBag</p>
+					<p>Were going to learn what this is by clicking on stuff! Identify the portal vein, the CBD, and the GallBag</p>
 					<p>{this.state.clickedAreaName}</p>
 				</header>
 				<p><button name="next" onClick={this.nextImage}>Next Image</button></p>
