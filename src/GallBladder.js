@@ -4,7 +4,7 @@ import ImageMapper from 'react-image-mapper';
 import Normal from './Images/GB/Normal.png';
 import Stones from './Images/GB/Cholelithiasis.png';
 import Cholecystitis from './Images/GB/AcuteChole.png';
-import Sludge from './Images/GB/Sludge.png';
+//import Sludge from './Images/GB/Sludge.png';
 
 const normalMap = {
 	name: "normalMap",
