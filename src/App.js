@@ -3,22 +3,25 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from './Home';
 import GallBladder from './GallBladder';
 import Measure from './Measure';
-
+import RealGB from './RealGB'
 
 export default class App extends React.Component {
 
 	render() {
 		return (
 			<div>
-			  <Router>
+		  <Router>
 				<div>
 		      <Route component={Home} />
 		      
 			  <Route path="/GallBladder/" component={GallBladder} /> 
 			  
 		      <Route path="/Measure/" component={Measure} />
+
+			  <Route path="/RealGB/" component={RealGB} />
+
 				</div>
-			  </Router>
+		  </Router>
 		  
 		  
 		  </div>
