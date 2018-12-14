@@ -10,6 +10,8 @@ export default class Home extends React.Component {
 				<Link to="/GallBladder/">Gallbladder</Link>
 				<p></p>
 				<Link to="/Measure/">Measure</Link>
+				<p></p>
+				<Link to="/RealGB">SonoGB</Link>
 			
 			</div>
 		)
