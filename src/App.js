@@ -10,7 +10,7 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<div>
-		  <Router>
+			  <Router>
 				<div>
 		      <Route component={Home} />
 		      
@@ -18,7 +18,7 @@ export default class App extends React.Component {
 			  
 		      <Route path="/Measure/" component={Measure} />
 				</div>
-		  </Router>
+			  </Router>
 		  
 		  
 		  </div>
