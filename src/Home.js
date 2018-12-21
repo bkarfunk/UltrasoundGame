@@ -11,7 +11,9 @@ export default class Home extends React.Component {
 				<p></p>
 				<Link to="/Measure/">Measure</Link>
 				<p></p>
-				<Link to="/RealGB">SonoGB</Link>
+				<Link to="/RealGB/">SonoGB</Link>
+				<p></p>
+				<Link to="/Test/">Test</Link>
 			
 			</div>
 		)
