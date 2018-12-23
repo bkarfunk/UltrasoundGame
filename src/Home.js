@@ -7,13 +7,13 @@ export default class Home extends React.Component {
 		return (
 			<div>
 				<h2>Home</h2>
-				<Link to="/GallBladder/">Gallbladder</Link>
+				<Link to="/GallBladder/">Cartoon Gallbladder</Link>
 				<p></p>
-				<Link to="/Measure/">Measure</Link>
+				<Link to="/Measure/">Measure a GB</Link>
 				<p></p>
-				<Link to="/RealGB/">SonoGB</Link>
+				<Link to="/RealGB/">SonoGB Images</Link>
 				<p></p>
-				<Link to="/Test/">Test</Link>
+				<Link to="/Test/">Take a Test</Link>
 			
 			</div>
 		)

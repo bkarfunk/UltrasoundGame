@@ -1,12 +1,9 @@
 import React from 'react';
-//import ReactDOM from 'react-dom';
 import { MeasurementLayer, calculateDistance, calculateArea } from 'react-measurements';
-import Normal from './Images/GB/Normal.png';
-import Cholecystitis from './Images/GB/AcuteChole.png';
-import Stones from './Images/GB/Cholelithiasis.png';
-import Sludge from './Images/GB/Sludge.png';
+import {CartoonGBMaps, CartoonGBImages} from './CartoonImages';
 
-var imageToLoad = [Normal,Stones,Cholecystitis];
+let MapToLoad = CartoonGBMaps;
+let imageToLoad = CartoonGBImages;
 let x = 0;
 
 export default class Measure extends React.Component {
