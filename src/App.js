@@ -10,7 +10,10 @@ export default class App extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div style = {{
+				position: 'relative',
+				textAlign: 'center'
+				}}>
 		  <Router>
 				<div>
 		      <Route component={Home} />
