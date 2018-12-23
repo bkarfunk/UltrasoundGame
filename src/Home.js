@@ -5,7 +5,10 @@ export default class Home extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div style = {{
+				position: 'relative',
+				textAlign: 'center'
+				}}>
 				<h2>Home</h2>
 				<Link to="/GallBladder/">Cartoon Gallbladder</Link>
 				<p></p>
