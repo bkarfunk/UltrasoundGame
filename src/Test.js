@@ -2,13 +2,13 @@ import React from 'react';
 import ImageMapper from 'react-image-mapper';
 
 import {CartoonGBMaps, CartoonGBImages} from './CartoonImages';
-import {SonoGBMaps, SonoGBImages} from'./SonoGBImages'
+import {SonoGBNormalMaps, SonoGBNormalImages, SonoGBAbNormalMaps, SonoGBAbNormalImages} from './SonoGBImages'
 
   
 
 
-let MapToLoad = [...CartoonGBMaps,...SonoGBMaps]; 
-let imageToLoad = [...CartoonGBImages,...SonoGBImages];
+let MapToLoad = [...SonoGBNormalMaps,SonoGBAbNormalMaps];
+let imageToLoad = [...SonoGBNormalImages,...SonoGBAbNormalImages];
 
 
 let x = Math.floor(Math.random()*imageToLoad.length);

@@ -95,7 +95,9 @@ const SonoGBStoneInNeck1MAP =
 	]
 }
 
-const SonoGBMaps = [SonoGBNorm1Map, SonoGBNorm2Map, SonoCholecystitisMap,SonoCBDCystitisStonePCFCBD1MAP,SonoGBStoneInNeck1MAP,SonoGBDopplerCBD1MAP,SonoGBShortAxis1MAP,SonoGBNormalFakeOutDuo1MAP];
-var SonoGBImages = [SonoGBNorm1, SonoGBNorm2, SonoCholecystitis,SonoCBDCystitisStonePCFCBD1,SonoGBStoneInNeck1,SonoGBDopplerCBD1,SonoGBShortAxis1,SonoGBNormalFakeOutDuo1];
+const SonoGBNormalMaps = [SonoGBNorm1Map, SonoGBNorm2Map, SonoGBShortAxis1MAP,SonoGBNormalFakeOutDuo1MAP,SonoGBDopplerCBD1MAP];
+const SonoGBAbNormalMaps = [SonoCholecystitisMap, SonoCBDCystitisStonePCFCBD1MAP, SonoGBStoneInNeck1MAP]
+const SonoGBNormalImages = [SonoGBNorm1, SonoGBNorm2, SonoGBShortAxis1,SonoGBNormalFakeOutDuo1,SonoGBDopplerCBD1];
+const SonoGBAbNormalImages = [SonoCholecystitis,SonoCBDCystitisStonePCFCBD1,SonoGBStoneInNeck1];
 
-export {SonoGBMaps, SonoGBImages};
+export {SonoGBNormalMaps, SonoGBNormalImages, SonoGBAbNormalMaps, SonoGBAbNormalImages};

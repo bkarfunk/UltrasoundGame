@@ -1,10 +1,10 @@
 import React from 'react';
 import ImageMapper from 'react-image-mapper';
 import { MeasurementLayer, calculateDistance, calculateArea } from 'react-measurements';
-import {SonoGBMaps, SonoGBImages} from './SonoGBImages'
+import {SonoGBNormalMaps, SonoGBNormalImages, SonoGBAbNormalMaps, SonoGBAbNormalImages} from './SonoGBImages'
 
-let MapToLoad = SonoGBMaps;
-let imageToLoad = SonoGBImages;
+let MapToLoad = [...SonoGBNormalMaps,SonoGBAbNormalMaps];
+let imageToLoad = [...SonoGBNormalImages,...SonoGBAbNormalImages];
 
 let x = 0;
 
