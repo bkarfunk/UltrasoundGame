@@ -3,7 +3,7 @@ import ImageMapper from 'react-image-mapper';
 import { MeasurementLayer, calculateDistance, calculateArea } from 'react-measurements';
 import {SonoGBNormalMaps, SonoGBNormalImages, SonoGBAbNormalMaps, SonoGBAbNormalImages} from './SonoGBImages'
 
-let MapToLoad = [...SonoGBNormalMaps,SonoGBAbNormalMaps];
+let MapToLoad = [...SonoGBNormalMaps,...SonoGBAbNormalMaps];
 let imageToLoad = [...SonoGBNormalImages,...SonoGBAbNormalImages];
 
 let x = 0;

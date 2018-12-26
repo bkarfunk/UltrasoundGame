@@ -1,20 +1,18 @@
 import React from 'react';
 import ImageMapper from 'react-image-mapper';
 
-import {CartoonGBMaps, CartoonGBImages} from './CartoonImages';
 import {SonoGBNormalMaps, SonoGBNormalImages, SonoGBAbNormalMaps, SonoGBAbNormalImages} from './SonoGBImages'
 
-  
-
-
-let MapToLoad = [...SonoGBNormalMaps,SonoGBAbNormalMaps];
+let MapToLoad = [...SonoGBNormalMaps,...SonoGBAbNormalMaps];
 let imageToLoad = [...SonoGBNormalImages,...SonoGBAbNormalImages];
-
 
 let x = Math.floor(Math.random()*imageToLoad.length);
 let y = Math.floor(Math.random()*MapToLoad[x].areas.length);
 let AreaToFind = MapToLoad[x].areas[y].name;
 let clickedAreaName='';
+let answered = false;
+let numCorrect = 0;
+let totalQuestions = 0;
 
 let message = '';
 
@@ -31,7 +29,8 @@ export default class Gallbladder extends React.Component {
         x = Math.floor(Math.random()*imageToLoad.length);
         y = Math.floor(Math.random()*MapToLoad[x].areas.length);
         AreaToFind = MapToLoad[x].areas[y].name;
-        message='';
+		message='';
+		answered=false;
 //		if(x>=imageToLoad.length){x=0}
         this.setState({clickedAreaName: ''})
  //       isCorrect = false;
@@ -41,12 +40,16 @@ export default class Gallbladder extends React.Component {
         this.setState({clickedAreaName: area.name})
         if(area.name===AreaToFind)
         {
-            message = "That is correct! You found the "+AreaToFind+". Click on Next Image to try again."
+			if(answered===false){numCorrect++;totalQuestions++;answered = true;}
+			message = "That is correct! You found the "+AreaToFind+". Click on Next Image to try again. That is "+ numCorrect+" correct out of "+totalQuestions+ " on the first try so far."
+			
         }
         else
         {
-            message = "No, that is not "+AreaToFind+", that is "+area.name+". Try again!"
-        }
+			if(answered===false){totalQuestions++;answered = true;}
+            message = "No, that is not "+AreaToFind+", that is "+area.name+". Try again! That is "+ numCorrect+" correct out of "+totalQuestions+ " on the first try so far."
+		}
+		
 	}
 
 	render() {

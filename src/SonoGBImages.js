@@ -6,6 +6,9 @@ import SonoGBStoneInNeck1 from './Images/GB/SonoImages/SonoGBStoneInNeck1_1.PNG'
 import SonoGBDopplerCBD1 from './Images/GB/SonoImages/SonoGBDopplerCBD1.PNG'
 import SonoGBShortAxis1 from './Images/GB/SonoImages/SonoGBShortAxis.PNG'
 import SonoGBNormalFakeOutDuo1 from './Images/GB/SonoImages/SonoGBFakeOutStoneDuo1.PNG'
+import SonoGBWES1 from './Images/GB/SonoImages/SonoGBWES1_1.PNG'
+import SonoGBNormHepatobil1 from './Images/GB/SonoImages/SonoGBNormalHepatoBilAnatom1_1.PNG'
+import SonoGBStone2 from './Images/GB/SonoImages/SonoGBStones2_1.PNG'
 
 const SonoGBNorm1Map = 
 {
@@ -60,6 +63,19 @@ const SonoGBNormalFakeOutDuo1MAP =
 	]
 }
 
+const SonoGBNormHepatobil1MAP=
+{
+	name: "SonoGBWES1_1Map",
+	areas: [
+		{name: "Anterior GB Wall", shape: "poly", coords: [523,474,541,453,556,441,592,420,623,404,667,381,703,373,758,367,764,377,746,379,724,383,699,382,672,392,643,402,612,418,580,438,545,468]},
+		{name: "Gallbladder", shape: "poly", coords: [633,534,615,542,600,554,583,564,563,574,535,576,511,551,516,525,531,497,546,473,562,458,593,438,630,416,672,400,706,387,737,386,773,382,811,382,838,392,847,411,847,434,826,464,807,476,786,492,748,496,719,508,673,519]},
+		{name: "Main Portal Vein", shape: "poly", coords: [235,524,256,530,271,539,288,551,302,558,331,576,351,600,371,610,361,635,333,635,315,619,299,610,292,588,278,576,265,571,244,565,229,554,221,542,217,531,221,527]},
+		{name: "Common Bile Duct", shape: "poly", coords: [344,569,330,560,324,553,307,543,289,533,296,526,307,530,316,537,325,542,335,547,348,552,354,555]},
+		{name: "Intrahepatic Portal Vein", shape: "poly", coords: [491,408,525,399,561,390,583,385,601,388,588,395,568,402,546,407,512,413,497,415]}
+
+	]  
+}
+
 const SonoCholecystitisMap = 
 { //abnormal
 	name: "SonoCholeMap",
@@ -73,7 +89,7 @@ const SonoCholecystitisMap =
 
 const SonoCBDCystitisStonePCFCBD1MAP = 
 {//abnormal
-	name: "SonoCholeMap",
+	name: "SonoCholeStoneMap",
 	areas: [
 		{name: "Stone", shape: "poly", coords: [428,530,440,536,453,538,463,544,477,548,491,546,504,540,522,540,538,541,545,534,543,521,538,510,525,505,512,505,501,515,484,511,470,504,457,504,447,504,439,504,430,508,427,518]},
 		{name: "Anterior GB Wall", shape: "poly", coords: [559,277,571,264,585,253,598,237,612,226,623,215,598,199,586,207,571,221,559,236,556,248,551,256,545,263]},
@@ -95,9 +111,36 @@ const SonoGBStoneInNeck1MAP =
 	]
 }
 
-const SonoGBNormalMaps = [SonoGBNorm1Map, SonoGBNorm2Map, SonoGBShortAxis1MAP,SonoGBNormalFakeOutDuo1MAP,SonoGBDopplerCBD1MAP];
-const SonoGBAbNormalMaps = [SonoCholecystitisMap, SonoCBDCystitisStonePCFCBD1MAP, SonoGBStoneInNeck1MAP]
-const SonoGBNormalImages = [SonoGBNorm1, SonoGBNorm2, SonoGBShortAxis1,SonoGBNormalFakeOutDuo1,SonoGBDopplerCBD1];
-const SonoGBAbNormalImages = [SonoCholecystitis,SonoCBDCystitisStonePCFCBD1,SonoGBStoneInNeck1];
+const SonoGBWES1MAP=
+{//abnormal
+	name: "SonoGBWES1_1Map",
+	areas: [
+		{name: "Anterior GB Wall", shape: "poly", coords: [579,337,593,330,604,325,618,319,641,311,675,301,704,296,706,306,686,310,662,318,636,325,619,333,589,347]},
+		{name: "Stone", shape: "poly", coords: [587,372,599,357,617,350,635,341,666,329,682,326,704,315,734,310,760,305,775,316,756,330,738,343,706,356,650,382,612,400,599,402,573,409,557,379]},
+		{name: "Portal Vein", shape: "circle", coords: [294,538,25]},
+		{name: "Hepatic Artery", shape: "circle", coords: [294,484,17]},
+		{name: "Common Bile Duct", shape: "circle", coords: [329,503,13]}
+
+	]  
+}
+
+const SonoGBStone2MAP=
+{//abnormal
+	name: "Stone2MAP",
+	areas:[
+		{name: "Anterior GB Wall", shape: "poly", coords: [607,238,603,233,598,227,589,221,580,214,573,212,564,206,553,201,547,197,538,192,527,186,516,182,506,176,509,170,515,173,525,179,533,183,543,187,552,193,558,197,570,203,586,213]},
+		{name: "Stones", shape: "poly", coords: [613,337,601,335,588,341,580,336,562,339,557,332,544,332,542,324,535,314,528,313,518,313,508,305,499,305,488,308,489,314,493,320,501,322,508,327,513,334,523,337,531,342,544,345,553,349,565,349,577,352,587,356,602,357,616,350,627,342,634,334,640,326,634,321,624,324]},
+		{name: "Portal Vein", shape: "poly", coords: [651,361,659,354,669,348,679,348,691,351,707,356,715,362,715,368,708,376,696,381,688,383,676,383,657,379]},
+		{name: "CBD", shape: "poly", coords: [681,338,687,338,690,343,697,343,703,341,710,340,716,341,722,344,729,343,725,334,715,334,693,334,683,332]},
+		{name: "Gallbladder", shape: "poly", coords: [406,144,449,159,478,165,496,174,509,181,531,191,540,198,561,208,587,223,601,235,618,256,628,286,635,309,623,324,615,330,606,333,591,334,582,334,573,332,559,331,547,325,538,314,528,308,515,302,502,301,493,300,487,308,485,316,482,321,472,313,459,301,447,290,438,280,426,271,412,259,402,246,389,235,379,224,375,212,371,198,374,179,380,161]}
+	]  
+}
+
+
+const SonoGBNormalMaps = [SonoGBNorm1Map, SonoGBNorm2Map, SonoGBShortAxis1MAP,SonoGBNormalFakeOutDuo1MAP,SonoGBDopplerCBD1MAP,SonoGBNormHepatobil1MAP];
+const SonoGBNormalImages = [SonoGBNorm1, SonoGBNorm2, SonoGBShortAxis1,SonoGBNormalFakeOutDuo1,SonoGBDopplerCBD1,SonoGBNormHepatobil1];
+
+const SonoGBAbNormalMaps = [SonoCholecystitisMap, SonoCBDCystitisStonePCFCBD1MAP, SonoGBStoneInNeck1MAP,SonoGBWES1MAP,SonoGBStone2MAP]
+const SonoGBAbNormalImages = [SonoCholecystitis,SonoCBDCystitisStonePCFCBD1,SonoGBStoneInNeck1,SonoGBWES1,SonoGBStone2];
 
 export {SonoGBNormalMaps, SonoGBNormalImages, SonoGBAbNormalMaps, SonoGBAbNormalImages};
