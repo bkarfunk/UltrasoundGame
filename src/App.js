@@ -5,6 +5,8 @@ import GallBladder from './GallBladder';
 import Measure from './Measure';
 import RealGB from './RealGB'
 import Test from './Test'
+import TestGif from './TestGif.js'
+import TestClickAreaThenMeasure from './TestClickAreaThenMeasure.js'
 
 export default class App extends React.Component {
 
@@ -25,6 +27,10 @@ export default class App extends React.Component {
 			  <Route path="/RealGB/" component={RealGB} />
 
 			  <Route path="/Test/" component={Test} />
+
+			  <Route path="/TestGif/" component={TestGif} />
+
+			  <Route path="/TestClickAreaThenMeasure/" component={TestClickAreaThenMeasure} />
 				</div>
 		  </Router>
 		  
