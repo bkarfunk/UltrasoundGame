@@ -6,6 +6,8 @@ import {SonoGBNormalMaps, SonoGBNormalImages, SonoGBAbNormalMaps, SonoGBAbNormal
 let MapToLoad = [...SonoGBNormalMaps,...SonoGBAbNormalMaps];
 let imageToLoad = [...SonoGBNormalImages,...SonoGBAbNormalImages];
 
+
+
 let x = Math.floor(Math.random()*imageToLoad.length);
 let y = Math.floor(Math.random()*MapToLoad[x].areas.length);
 let AreaToFind = MapToLoad[x].areas[y].name;
@@ -13,7 +15,7 @@ let clickedAreaName='';
 let answered = false;
 let numCorrect = 0;
 let totalQuestions = 0;
-
+//window.alert(MapToLoad.length+" maps and "+imageToLoad.length+" images.");
 let message = '';
 
 export default class Gallbladder extends React.Component {
@@ -61,14 +63,15 @@ export default class Gallbladder extends React.Component {
 				textAlign: "justify"
 			}}>
 				<header className="App-header">
+				<p>Time to test your knowledge! Click on the {AreaToFind}</p>
+                    <p>{message}</p>
+					<p><button name="next" onClick={this.nextImage}>Next Image</button></p>
+			
 					<ImageMapper src={imageToLoad[x]}  map={MapToLoad[x]}
 						onClick={this.areaClicked}
 					/>
-					<p>Time to test your knowledge! Click on the {AreaToFind}</p>
-                    <p>{message}</p>
-                    
+				
 				</header>
-				<p><button name="next" onClick={this.nextImage}>Next Image</button></p>
 			
 			</div>
 		)

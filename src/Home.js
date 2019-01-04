@@ -17,6 +17,10 @@ export default class Home extends React.Component {
 				<Link to="/RealGB/">SonoGB Images</Link>
 				<p></p>
 				<Link to="/Test/">Take a Test</Link>
+				<p></p>
+				<Link to="/TestGif/">Testing how gifs work</Link>
+				<p></p>
+				<Link to="/TestClickAreaThenMeasure/">Click then measure test</Link>
 			
 			</div>
 		)
