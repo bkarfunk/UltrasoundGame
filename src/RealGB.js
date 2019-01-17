@@ -18,13 +18,19 @@ export default class RealGB extends React.Component {
         }
         
 	}
+	enterArea(area) {
+		this.setState();
+	}
+	leaveArea(area) {
+		this.setState();
+	}
 	nextImage = () =>{
-		x = Math.floor(Math.random()*imageToLoad.length);
-		//y = Math.floor(Math.random()*MapToLoad[x].areas.length);
+		x = Math.floor(Math.random()*imageToLoad.length); // select a random image from the array of uploaded images
 		this.setState({clickedAreaName: ''})
+		this.state.measurements= [];
 	  }
 	areaClicked = (area, index, event) => {
-		this.setState({clickedAreaName: area.name})
+		//this.setState({clickedAreaName: area.name})
 	}
     onChange = (measurements) => {
 		this.setState({ ...this.state, measurements })
@@ -42,7 +48,7 @@ export default class RealGB extends React.Component {
     this.onImageBoundsChanged();
   };
 
-  onImageBoundsChanged = (event) => {
+  onImageBoundsChanged = () => {
     const imageBounds = this.image.getBoundingClientRect();
     this.setState({
       widthInPx: imageBounds.width,
@@ -53,50 +59,41 @@ export default class RealGB extends React.Component {
 		return ( 
 		<div >
 			<div 
-				style={{
-				position: 'absolute',
-				fontFamily: 'sans-serif',
-				justifyContent: 'center'
-				}}>
+				>
 
-					<div style={{
-						position: 'relative',
-						justifyContent: 'center'
-					}}>
+					
 						<p>
-							<div style = {{zIndex: 1}}>
 								<button name="next" onClick={this.nextImage}>Next Image in Random Order</button>
 								<p>Lets look at a real picture</p>
-								<p>That is the: {this.state.clickedAreaName}</p>
-							</div>
+								
 						</p>
-					</div>  
-					<div  style={{position: 'relative'}}>         
-                <MeasurementLayer
+					
+						</div>  
+						<div style={{
+				position: 'absolute',
+				textAlign: 'justify'
+				}}>
+								
+									<img 
+										ref={e => (this.image = e)}
+										src={imageToLoad[x]} 
+										onLoad={this.onLoad}
+										
+									/>
+								<MeasurementLayer
                     measurements={this.state.measurements}
                     widthInPx={this.state.widthInPx}
                     heightInPx={this.state.heightInPx}
                     onChange={this.onChange}
                     measureLine={this.measureLine}
                     measureCircle={this.measureCircle}
-                    />
-                <ImageMapper 
-                    src={imageToLoad[x]}  
-                    map={MapToLoad[x]}
-										onClick={this.areaClicked}
-								/>
+                  />									
 							
-								<img 
-                    ref={e => (this.image = e)}
-                    src={imageToLoad[x]} 
-                    useMap={MapToLoad[x]}
-                    onLoad={this.onLoad}
-                    
-                	/>
-									</div>
+						
+						</div>
        
 					
-					</div>
+			
 			</div>
 		)
 	}
