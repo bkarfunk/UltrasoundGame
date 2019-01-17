@@ -8,14 +8,24 @@ let imageToLoad = [...SonoGBNormalImages,...SonoGBAbNormalImages];
 
 
 
-let x = Math.floor(Math.random()*imageToLoad.length);
-let y = Math.floor(Math.random()*MapToLoad[x].areas.length);
+let x = Math.floor(Math.random()*imageToLoad.length); 
+// initiate to a random image X
+let y = Math.floor(Math.random()*MapToLoad[x].areas.length); 
+// initiate to a random part Y of random image X
 let AreaToFind = MapToLoad[x].areas[y].name;
+//set area to find to random part Y's name
 let clickedAreaName='';
+
 let answered = false;
+//global variable 'answered' defaults to false, acts as a flag to allow
+// only one answer per question
 let numCorrect = 0;
+//global variable to keep track of number answered correctly on first attempt
+
 let totalQuestions = 0;
+
 //window.alert(MapToLoad.length+" maps and "+imageToLoad.length+" images.");
+
 let message = '';
 
 export default class Gallbladder extends React.Component {
@@ -31,24 +41,32 @@ export default class Gallbladder extends React.Component {
         x = Math.floor(Math.random()*imageToLoad.length);
         y = Math.floor(Math.random()*MapToLoad[x].areas.length);
         AreaToFind = MapToLoad[x].areas[y].name;
-		message='';
-		answered=false;
+		message='';//reset message
+		answered=false; 
 //		if(x>=imageToLoad.length){x=0}
         this.setState({clickedAreaName: ''})
- //       isCorrect = false;
-        
+      
 	  }
 	areaClicked = (area, index, event) => {
         this.setState({clickedAreaName: area.name})
         if(area.name===AreaToFind)
-        {
-			if(answered===false){numCorrect++;totalQuestions++;answered = true;}
+        {   
+			if(answered===false) 
+			//if the question had not already been answered, add one to the #correct
+			{
+				numCorrect++;
+				totalQuestions++;
+				answered = true;
+			}
 			message = "That is correct! You found the "+AreaToFind+". Click on Next Image to try again. That is "+ numCorrect+" correct out of "+totalQuestions+ " on the first try so far."
-			
-        }
-        else
+		}
+        else //did not click on the right area
         {
-			if(answered===false){totalQuestions++;answered = true;}
+			if(answered===false)
+			{ //if this was the first time submitted an answer to this question
+				totalQuestions++;
+				answered = true;
+			}
             message = "No, that is not "+AreaToFind+", that is "+area.name+". Try again! That is "+ numCorrect+" correct out of "+totalQuestions+ " on the first try so far."
 		}
 		
@@ -67,8 +85,10 @@ export default class Gallbladder extends React.Component {
                     <p>{message}</p>
 					<p><button name="next" onClick={this.nextImage}>Next Image</button></p>
 			
-					<ImageMapper src={imageToLoad[x]}  map={MapToLoad[x]}
-						onClick={this.areaClicked}
+					<ImageMapper 
+					src={imageToLoad[x]}  
+					map={MapToLoad[x]}
+					onClick={this.areaClicked}
 					/>
 				
 				</header>

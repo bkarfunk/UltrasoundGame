@@ -2,9 +2,9 @@ import React from 'react';
 import { MeasurementLayer, calculateDistance, calculateArea } from 'react-measurements';
 import {CartoonGBMaps, CartoonGBImages} from './CartoonImages';
 
-let MapToLoad = CartoonGBMaps;
+
 let imageToLoad = CartoonGBImages;
-let x = 0;
+let x = 0; // global iterator
 
 export default class Measure extends React.Component {
 
@@ -56,7 +56,7 @@ export default class Measure extends React.Component {
 			>
 
 				<img 
-	        ref={e => (this.image = e)}
+	        ref={e => (this.image = e)} //not sure why this is done this way?
 					src={imageToLoad[x]} 
           onLoad={this.onLoad}
 				/>
