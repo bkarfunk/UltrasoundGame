@@ -7,6 +7,7 @@ import RealGB from './RealGB'
 import Test from './Test'
 import TestGif from './TestGif.js'
 import TestClickAreaThenMeasure from './TestClickAreaThenMeasure.js'
+import ApicalEcho from './ApicalEcho.js'
 
 export default class App extends React.Component {
 
@@ -31,6 +32,8 @@ export default class App extends React.Component {
 			  <Route path="/TestGif/" component={TestGif} />
 
 			  <Route path="/TestClickAreaThenMeasure/" component={TestClickAreaThenMeasure} />
+			  
+			  <Route path="/ApicalEcho/" component={ApicalEcho} />
 				</div>
 		  </Router>
 		  

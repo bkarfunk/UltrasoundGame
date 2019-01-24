@@ -21,6 +21,8 @@ export default class Home extends React.Component {
 				<Link to="/TestGif/">Testing how gifs work</Link>
 				<p></p>
 				<Link to="/TestClickAreaThenMeasure/">Click then measure test</Link>
+				<p></p>
+				<Link to="/ApicalEcho/">Apical Echo</Link>
 			
 			</div>
 		)
