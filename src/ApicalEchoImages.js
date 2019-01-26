@@ -1,4 +1,6 @@
 import SonoEchoApical1 from './Images/Echo/EchoApical1.png'
+import SonoEchoApical2ch1 from './Images/Echo/EchoApical2ch1.png'
+import SonoEchoApical3ch1 from './Images/Echo/EchoApical3ch1.png'
 
 const SonoEchoApical1MAPAnatomy = 
 { //normal
@@ -33,7 +35,6 @@ areas:
         {name: "Mid Lateral Segment", shape: "poly", coords: [477,210,502,206,508,217,515,240,518,263,518,271,489,273,493,250,488,231]},
         {name: "Basal Lateral Segment", shape: "poly", coords: [489,278,492,288,493,299,491,311,489,322,518,324,520,313,520,300,520,288,514,276]}
     ]
-
 }
 
 const SonoEchoApical1MAPCoronaryAnatomy = 
@@ -51,9 +52,88 @@ areas:
 
 }
 
+const SonoEchoApical2ch1MAPAnatomy = 
+{ //normal
+name: "SonoEchoApical2ch1Anatomy",
+areas:
+    [
+        {name: "Mitral Valve", shape: "poly", coords: [435,382,444,365,457,352,479,344,505,341,532,344,558,361,544,366,537,358,518,351,483,357,462,367,447,383]},
+        {name: "Anterior Left Ventricle", shape: "poly", coords: [581,354,587,311,571,282,556,249,536,222,514,191,486,162,469,135,453,135,479,165,542,262,567,315,566,354]},
+        {name: "Apical Left Ventricle", shape: "poly", coords: [469,126,448,110,424,102,396,96,369,99,352,112,346,122,344,138,344,156,346,166,369,163,363,135,370,113,399,114,429,121,452,129]},
+        {name: "Inferior Left Ventricl", shape: "poly", coords: [349,173,350,192,350,205,352,237,354,270,353,310,360,341,366,349,384,371,390,384,407,395,421,388,394,367,391,338,389,309,389,275,387,251,375,213,371,182,367,167]},
+        {name: "LV Chamber", shape: "poly", coords: [432,379,444,356,459,343,482,332,512,335,533,340,557,358,560,339,556,308,540,278,520,252,501,218,481,197,465,178,441,163,436,152,418,137,398,127,380,123,371,143,373,189,384,234,394,307,399,337,406,364,416,373]},
+        {name: "Left Atrium", shape: "poly", coords: [450,389,461,374,482,366,503,363,527,365,540,383,556,428,570,453,574,467,550,478,508,479,490,477,477,465,462,436,450,418]},
+        {name: "Left Atrial Appendage", shape:"poly", coords:[566,395,581,388,589,379,608,376,616,396,609,409,590,418,579,419,568,417,557,401]}
+    ]
+}
 
-const SonoEchoApicalNormalMaps = [SonoEchoApical1MAPAnatomy,SonoEchoApical1MAPSegmentalAnatomy, SonoEchoApical1MAPCoronaryAnatomy];
-const SonoEchoApicalNormalImages = [SonoEchoApical1,SonoEchoApical1,SonoEchoApical1];
+
+const SonoEchoApical2ch1MAPSegmentalAnatomy = 
+{ //normal
+name: "SonoEchoApical2ch1SegmentalAnatomy",
+areas:
+    [
+        {name: "Basal Inferior Segment", shape: "poly", coords: [433,381,414,375,404,366,394,357,385,330,358,325,359,334,365,350,372,367,384,380,402,388,412,393]},
+        {name: "Mid Inferior Segment", shape: "poly", coords: [384,323,385,308,383,284,389,258,382,231,374,203,354,205,355,218,354,232,354,256,355,288,357,309,357,317]},
+        {name: "Apical Inferior Segment", shape: "poly", coords: [352,199,346,178,346,145,346,124,352,115,365,106,373,117,366,132,366,140,367,157,367,170,367,186,371,193,372,199]},
+        {name: "Apical Anterior Segment", shape: "poly", coords: [372,105,390,104,417,104,433,109,453,116,463,125,475,141,463,148,445,130,440,118,425,116,409,117,382,117]},
+        {name: "Mid Anterior Segment", shape: "poly", coords: [476,143,486,151,491,163,496,175,502,187,510,198,518,209,528,223,540,245,542,253,533,258,523,243,513,227,505,215,499,207,488,191,478,176,471,162,466,150]},
+        {name: "Basal Anterior Segment", shape: "poly", coords: [548,256,564,279,568,299,577,314,578,339,569,355,557,358,556,341,558,325,558,306,550,286,545,274,539,264]}
+    ]
+}
+
+const SonoEchoApical2ch1MAPCoronaryAnatomy = 
+{ //normal
+name: "SonoEchoApical2ch1CoronaryAnatomy",
+areas:
+    [
+        {name: "RCA", shape: "poly", coords: [425,383,413,380,403,369,388,358,389,332,388,292,385,252,372,201,370,180,347,174,347,188,350,206,355,232,355,252,357,273,356,296,358,318,360,337,364,354,373,369,385,380,397,388,414,395,421,396,431,390]},
+        {name: "LAD", shape: "poly", coords: [370,173,367,159,365,146,364,130,368,119,383,115,401,115,410,118,419,131,432,146,444,152,455,164,470,178,479,188,494,206,509,234,526,271,537,300,542,316,550,337,552,349,563,354,578,348,577,327,567,307,556,287,546,267,539,251,527,229,519,216,510,200,495,179,482,157,469,141,442,124,429,112,413,105,395,101,379,101,363,106,354,113,350,129,350,147,349,161,348,168]}
+        
+    ]
+}
+
+const SonoEchoApical3ch1MAPAnatomy = 
+{ //normal
+name: "SonoEchoApical3ch1Anatomy",
+areas:
+    [
+        {name: "LV Lateral Wall", shape: "poly", coords: [415,387,389,376,380,325,374,286,383,223,404,186,416,163,408,135,386,145,369,192,357,246,352,290,352,345,366,383,385,398]},
+        {name: "Interventricular Septem", shape: "poly", coords: [536,331,527,293,521,248,506,216,486,187,473,200,486,234,498,259,504,293,500,311,499,336,501,346]},
+        {name: "LV Outflow Tract", shape: "poly", coords: [505,352,521,374,528,392,510,405,498,410,487,387,477,371]},
+        {name: "Mitral Valve", shape: "poly", coords: [408,391,418,380,419,362,415,349,424,346,432,355,435,368,437,381,446,391,450,381,449,371,441,353,441,337,457,341,464,363,474,376,483,391,487,399,467,402,430,402,413,400]},
+        {name: "Left Atrium", shape: "poly", coords: [432,411,436,437,441,457,457,482,473,518,498,529,521,527,524,508,521,486,498,463,491,448,486,427,476,413]}
+    ]
+
+}
+
+const SonoEchoApical3ch1MAPSegmentalAnatomy = 
+{ //normal
+name: "SonoEchoApical3ch1SegmentalAnatomy",
+areas:
+    [
+        {name: "Basal Infero-Lateral Segment", shape: "poly", coords: [415,388,400,377,395,357,389,343,380,326,373,313,355,312,354,325,354,336,363,358,371,381,378,392,390,394,401,400]},
+        {name: "Mid Infero-Lateral Segment", shape: "poly", coords: [355,307,355,293,357,269,361,249,366,226,389,228,385,244,384,266,379,282,376,298,376,306]},
+        {name: "Apical Lateral Segment", shape: "poly", coords: [393,222,403,202,414,186,421,172,417,146,411,136,396,142,389,153,382,171,376,190,371,207,368,221]},
+        {name: "Apical Septal Segment", shape: "poly", coords: [417,136,437,141,444,142,459,158,473,171,477,181,481,189,473,201,466,192,458,181,445,168,435,161,428,162]},
+        {name: "Mid Antero-Septum Segment", shape: "poly", coords: [485,191,505,220,516,248,524,280,498,289,499,268,494,248,486,233,478,211,472,204]},
+        {name: "Basal Antero-Septum Segment", shape: "poly", coords: [524,284,526,299,532,311,539,327,540,342,508,352,503,334,502,322,501,309,499,292]}
+    ]
+}
+
+const SonoEchoApical3ch1MAPCoronaryAnatomy = 
+{ //normal
+name: "SonoEchoApical3ch1CoronaryAnatomy",
+areas:
+    [
+        {name: "RCA or Circumflex", shape: "poly", coords: [393,378,370,389,364,369,361,345,357,330,357,313,353,298,356,268,362,240,365,228,384,230,379,280,378,309,394,338]},
+        {name: "LAD", shape: "poly", coords: [386,228,394,208,407,188,420,173,443,175,467,194,479,226,489,263,499,290,496,324,494,338,508,338,509,307,509,284,500,253,491,225,479,198,459,164,438,143,422,132,404,134,389,144,381,160,371,191,366,215,365,220]}
+        
+    ]
+}
+
+const SonoEchoApicalNormalMaps = [SonoEchoApical1MAPAnatomy,SonoEchoApical1MAPSegmentalAnatomy, SonoEchoApical1MAPCoronaryAnatomy,SonoEchoApical2ch1MAPAnatomy,SonoEchoApical2ch1MAPSegmentalAnatomy,SonoEchoApical2ch1MAPCoronaryAnatomy,SonoEchoApical3ch1MAPAnatomy,SonoEchoApical3ch1MAPSegmentalAnatomy,SonoEchoApical3ch1MAPCoronaryAnatomy];
+const SonoEchoApicalNormalImages = [SonoEchoApical1,SonoEchoApical1,SonoEchoApical1,SonoEchoApical2ch1,SonoEchoApical2ch1,SonoEchoApical2ch1,SonoEchoApical3ch1,SonoEchoApical3ch1,SonoEchoApical3ch1];
 
 const SonoEchoApicalAbNormalMaps = [];
 const SonoEchoApicalAbNormalImages = [];
